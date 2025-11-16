@@ -19,4 +19,5 @@ A modern, responsive landing page for VyomGarud, a UAV/drone systems company.
 ![Full Page](screenshots/full-page.png)
 
 ## Deployment
-Deployed on Vercel: [Link](https://your-vercel-link.vercel.app)
+
+Live demo: [https://vyomgarud-landing.vercel.app](https://vyomgarud-landing.vercel.app)
