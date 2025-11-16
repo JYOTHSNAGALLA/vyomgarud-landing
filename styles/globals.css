@@ -1,26 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
+  /* Light mode base */
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Dark military theme colors */
+  --color-bg: #0b0c10; /* charcoal black */
+  --color-bg-alt: #1f1f1f;
+  --color-text: #e6e6e6;
+  --color-accent: #ff7b00; /* military orange */
+
+  /* Fonts */
+  --font-sans: "Inter", sans-serif;
+  --font-heading: "Montserrat", sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sans);
+  --font-heading: var(--font-heading);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--color-bg);
+    --foreground: var(--color-text);
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* Military gradient highlight */
+.highlight {
+  background: linear-gradient(90deg, #ff7b00, #ff9c33);
+  -webkit-background-clip: text;
+  background-clip: text; /* Required standard property */
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtle text glow */
+.glow {
+  text-shadow: 0px 0px 8px rgba(255, 123, 0, 0.6);
+}
+
+/* Card styling */
+.card {
+  background: var(--color-bg-alt);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: rgba(255, 123, 0, 0.4);
+  transform: translateY(-3px);
+}
+
+/* Smooth hover fade */
+.hover-fade {
+  transition: opacity 0.25s ease;
+}
+
+.hover-fade:hover {
+  opacity: 0.7;
+}
+
+/* Orange button */
+.btn-orange {
+  background-color: var(--color-accent);
+  color: white;
+  padding: 12px 22px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.btn-orange:hover {
+  background-color: #ff932e;
+  transform: translateY(-2px);
+}
+
+/* Section spacing */
+.section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #383838;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff7b00;
 }
