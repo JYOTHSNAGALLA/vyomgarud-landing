@@ -20,4 +20,4 @@ A modern, responsive landing page for VyomGarud, a UAV/drone systems company.
 
 ## Deployment
 
-Live demo: [https://vyomgarud-landing.vercel.app](https://vyomgarud-landing.vercel.app)
+Live demo: [https://vyomgarudlanding-pi.vercel.app](https://vyomgarudlanding-pi.vercel.app)
